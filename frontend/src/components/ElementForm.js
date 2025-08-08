@@ -27,7 +27,7 @@ const ElementForm = () => {
 
     formData.append('type', type);
 
-    await axios.post('http://localhost:5000/api/canvas/add', formData);
+    await axios.post('https://canvas-kappa-six.vercel.app/api/canvas/add', formData);
     alert('Element Added');
   };
 
