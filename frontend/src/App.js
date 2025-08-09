@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import CanvasForm from './components/CanvasForm';
 import ElementForm from './components/ElementForm';
 import axios from 'axios';
-import './App.css'; // Ensure CSS is imported
+import './App.css'; // Make sure to import your CSS
 
 function App() {
   const [canvasSize, setCanvasSize] = useState({ width: 600, height: 400 });
 
   const handleExport = async () => {
-    const response = await axios.get('https://localhost:5000/api/canvas/export', {
+    const response = await axios.get('https://canvas-lilac-zeta.vercel.app/api/canvas/export', {
       responseType: 'blob',
     });
     const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -22,12 +22,8 @@ function App() {
   return (
     <div className="app-container">
       <h1>Canvas Builder</h1>
-      <div style={{ marginBottom: '32px' }}>
-        <CanvasForm setCanvasSize={setCanvasSize} />
-      </div>
-      <div style={{ marginBottom: '32px', borderTop: '1px solid #eee', paddingTop: '32px' }}>
-        <ElementForm />
-      </div>
+      <CanvasForm setCanvasSize={setCanvasSize} />
+      <ElementForm />
       <div style={{ textAlign: 'center' }}>
         <button onClick={handleExport}>Export PDF</button>
       </div>

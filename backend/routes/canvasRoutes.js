@@ -2,10 +2,15 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
-const controller = require('../controllers/canvasController');
+const { createCanvasAPI, addElementAPI, exportPDFAPI } = require('../controllers/canvasController');
 
-router.post('/create', controller.createCanvasAPI);
-router.post('/add', upload.single('imageFile'), controller.addElementAPI);
-router.get('/export', controller.exportPDFAPI);
+// Create canvas
+router.post('/create', createCanvasAPI);
+
+// Add element
+router.post('/add', upload.single('image'), addElementAPI);
+
+// Export to PDF
+router.get('/export', exportPDFAPI);
 
 module.exports = router;
