@@ -27,7 +27,7 @@ const ElementForm = () => {
 
     formData.append('type', type);
 
-    await axios.post('https://canvasbuilder-flax.vercel.app/api/canvas/add', formData);
+    await axios.post('https://canvas-lilac-zeta.vercel.app/api/canvas/add', formData);
     alert('Element Added');
   };
 
