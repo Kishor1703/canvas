@@ -8,7 +8,7 @@ function App() {
   const [canvasSize, setCanvasSize] = useState({ width: 600, height: 400 });
 
   const handleExport = async () => {
-    const response = await axios.get('https://localhost:5000/api/canvas/export', {
+    const response = await axios.get('https://canvas-backend-fohd.onrender.com/api/canvas/export', {
       responseType: 'blob',
     });
     const url = window.URL.createObjectURL(new Blob([response.data]));

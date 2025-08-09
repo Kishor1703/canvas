@@ -27,7 +27,7 @@ const ElementForm = () => {
 
     formData.append('type', type);
 
-    await axios.post('https://localhost:5000/api/canvas/add', formData);
+    await axios.post('https://canvas-backend-fohd.onrender.com/api/canvas/add', formData);
     alert('Element Added');
   };
 
