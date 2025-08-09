@@ -7,7 +7,8 @@ const PORT = 5000;
 const allowedOrigins = [
   'http://localhost:3000',
 'https://canvasbuilder-flax.vercel.app/',
-'https://canvas-kappa-six.vercel.app'
+'https://canvas-kappa-six.vercel.app',
+'https://canvas-kappa-six.vercel.app/api/canvas/create'
 ];
 
 
