@@ -5,10 +5,7 @@ const canvasRoutes = require('./routes/canvasRoutes');
 const PORT = 5000;
 
 const allowedOrigins = [
-  'http://localhost:3000',
-'https://canvasbuilder-flax.vercel.app/',
-'https://canvas-lilac-zeta.vercel.app/',
-'https://canvas-lilac-zeta.vercel.app/api/canvas/create'
+  'http://localhost:3000'
 ];
 
 
