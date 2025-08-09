@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    // TODO: Add your logic for adding an element to the canvas
+    // Your element add logic here
     res.status(200).json({ message: 'Element added' });
   } else {
     res.status(405).json({ error: 'Method Not Allowed' });

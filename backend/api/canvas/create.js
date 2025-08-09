@@ -7,9 +7,8 @@ export default function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    const { width, height } = req.body;
-    // You can add logic to store or process the canvas here
-    res.status(200).json({ message: 'Canvas created', width, height });
+    // Your canvas creation logic here
+    res.status(200).json({ message: 'Canvas created' });
   } else {
     res.status(405).json({ error: 'Method Not Allowed' });
   }

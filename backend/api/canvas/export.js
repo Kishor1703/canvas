@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'GET') {
-    // TODO: Add your logic for exporting the canvas as PDF
+    // Your export logic here
     res.status(200).json({ message: 'Exported PDF' });
   } else {
     res.status(405).json({ error: 'Method Not Allowed' });
