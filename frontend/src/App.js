@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import CanvasForm from './components/CanvasForm';
 import ElementForm from './components/ElementForm';
 import axios from 'axios';
-import './App.css'; // Make sure to import your CSS
+import './App.css'; 
 
 function App() {
   const [canvasSize, setCanvasSize] = useState({ width: 600, height: 400 });
 
   const handleExport = async () => {
-    const response = await axios.get('https://canvas-lilac-zeta.vercel.app/api/canvas/export', {
+    const response = await axios.get('https://localhost:5000/api/canvas/export', {
       responseType: 'blob',
     });
     const url = window.URL.createObjectURL(new Blob([response.data]));

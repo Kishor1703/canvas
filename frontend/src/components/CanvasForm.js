@@ -7,7 +7,7 @@ const CanvasForm = ({ setCanvasSize }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('https://canvas-lilac-zeta.vercel.app/api/canvas/create', { width, height });
+    await axios.post('http://localhost:5000/api/canvas/create', { width, height });
     setCanvasSize({ width, height });
     alert('Canvas Initialized');
   };
